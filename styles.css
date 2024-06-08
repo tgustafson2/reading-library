@@ -1,94 +1,109 @@
-:root{
-    --header-height : 100px;
-    --header-background-color: #4ade80;
-    --sidebar-width : 300px;
-    --sidebar-background-color : ;
-    --library-background-color: #e7e5e4;
-    --book-background-color: white;
-    --book-text-color: ;
-    --header-button-color: ;
-    --header-text-color: ;
-    --header-button-text: ;
-    --book-button-color: ;
-    --book-button-text: ;
+:root {
+  --header-height: 100px;
+  --header-background-color: #4ade80;
+  --sidebar-width: 300px;
+  --sidebar-background-color: ;
+  --library-background-color: #e7e5e4;
+  --book-background-color: white;
+  --book-text-color: ;
+  --header-button-color: ;
+  --header-text-color: ;
+  --header-button-text: ;
+  --book-button-color: ;
+  --book-button-text: ;
 }
 body,
-html{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.header{
-    width: 100vw;
-    height: var(--header-height);
-    background-color: var(--header-background-color);
-    display: grid;
-    grid-template-rows: 1fr;
+.header {
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--header-background-color);
+  display: grid;
+  grid-template-rows: 1fr;
 }
 
-
-
-.library-container{
-    height: calc(100vh - var(--header-height));
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: 200px;
-    gap: 40px;
-    background-color: var(--library-background-color);
-    grid-auto-flow: row;
-    grid-auto-rows: 200px;
-    margin-right: var(--sidebar-width);
-    padding: 40px 40px 0px;
-    overflow-y: auto;
+.library-container {
+  height: calc(100vh - var(--header-height));
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 200px;
+  gap: 40px;
+  background-color: var(--library-background-color);
+  grid-auto-flow: row;
+  grid-auto-rows: 200px;
+  margin-right: var(--sidebar-width);
+  padding: 40px 40px 0px;
+  overflow-y: auto;
 }
 
-.book-container{
-    background-color: var(--book-background-color);
+.book-container {
+  background-color: var(--book-background-color);
 }
 
-.user-info{
-
+.user-info {
 }
 
-.show-modal{
-
+.show-modal {
 }
 
-.newBook{
-
+.newBook {
 }
 
-.book-title{
-
+.book-title {
 }
 
-.author{
-
+.author {
 }
 
-.pages{
-
+.pages {
 }
 
-.read-yet{
-
+.read-yet {
 }
 
-.sidebar{
-    background-color: var(--sidebar-background-color);
+.sidebar {
+  background-color: var(--sidebar-background-color);
 }
 
-.add-book-container{
-    text-align: center;
-    align-self: center;
+.add-book-container {
+  text-align: center;
+  align-self: center;
 }
 
-.main-content{
-    display: grid;
-    max-height: calc(100vh - var(--header-height));
-    grid-template-columns: var(--sidebar-width) 1fr;
-    width: 100vw;
+.main-content {
+  display: grid;
+  max-height: calc(100vh - var(--header-height));
+  grid-template-columns: var(--sidebar-width) 1fr;
+  width: 100vw;
 }
 
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
